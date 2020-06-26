@@ -25,6 +25,10 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <link href="assets/css/quiz-style.css" rel="stylesheet">
+
+  <script defer src="assets/js/quiz.js"></script>
+  
 </head>
 
 <body>
@@ -50,8 +54,21 @@
   </header><!-- End Header -->
 
   <main id="main">
-    <section class="quiz-container">
-    <div class="container">
+    <div class="quiz">
+    <div class="containers">
+      <div class="quiz-title">FaceChai Quiz</div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="img-2">
+          <img src="assets/img/desktop-tower.png"
+          width="50%" height="50%"></div>
+        </div>
+        <div class="col-lg-4">
+          <div class="img-1">
+          <img src="assets/img/monitor.png"
+          width="50%" height="50%"></div>
+        </div>
+      </div>
       <div id="question-container" class="hide">
         <div id="question">Question</div>
         <div id="answer-buttons" class="btn-grid">
@@ -62,26 +79,12 @@
         </div>
       </div>
       <div class="controls">
-        <button id="start-btn" class="btn">Start</button>
-        <button id="next-btn" class="btn">Next</button>
-      </div>
+        <button id="start-btn" class="start-btn btn">Start</button>
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+      
     </div>
-    </section>
+    </div>
   </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>FaceChai</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">Meaad Hassan</a> 
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -91,7 +94,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/quiz.js"></script>
 
 </body>
 
