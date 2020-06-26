@@ -1,7 +1,9 @@
 const startButton= document.getElementById('start-btn')
 const nextButton= document.getElementById('next-btn')
+const startImage=document.getElementById('start-icon')
 const questionContainerElement= document.getElementById
 ('question-container')
+const questionImage = document.getElementById('question-img')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
@@ -90,42 +92,42 @@ function clearStatusClass(element)
 }
 const questions=[
     {
-        question:'What is 2+2?',
+        question:'Which Computer Part is this?',
         answers:[
-            {text:'6',correct:false},
-            {text:'26',correct:false},
-            {text:'4',correct:true},
-            {text:'8',correct:false}
+            {text:'Graphics Card',correct:false},
+            {text:'Random Access Memory',correct:false},
+            {text:'Central Proccess Unit',correct:true},
+            {text:'Power Supply Unit',correct:false}
         ]
         
     },
     {
-        question:'What is 2+2?',
+        question:'Which Computer Part is this?',
         answers:[
-            {text:'6',correct:false},
-            {text:'26',correct:false},
-            {text:'4',correct:true},
-            {text:'8',correct:false}
+            {text:'Graphics Card',correct:true},
+            {text:'PCI SSD',correct:false},
+            {text:'Sound Card',correct:false},
+            {text:'Network Card',correct:false}
         ]
         
     },
     {
-        question:'What is 2+2?',
+        question:'Which Computer Part is this?',
         answers:[
-            {text:'6',correct:false},
-            {text:'26',correct:false},
-            {text:'4',correct:true},
-            {text:'8',correct:false}
+            {text:'SSD',correct:false},
+            {text:'NVME SSD',correct:true},
+            {text:'PCI SSD',correct:false},
+            {text:'Hard Drive',correct:false}
         ]
         
     },
     {
-        question:'What is 2+2?',
+        question:'Which Computer Part is this?',
         answers:[
-            {text:'6',correct:false},
-            {text:'26',correct:false},
-            {text:'4',correct:true},
-            {text:'8',correct:false}
+            {text:'Motherboard',correct:true},
+            {text:'PCI Expension Card',correct:false},
+            {text:'USB Controller Card',correct:false},
+            {text:'North Bridge Chip',correct:false}
         ]
         
     }
