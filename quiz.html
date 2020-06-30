@@ -49,24 +49,19 @@
           <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
       </nav><!-- .nav-menu -->
-
     </div>
   </header><!-- End Header -->
-
   <main id="main">
     <div class="quiz">
     <div class="containers">
       <div class="quiz-title">FaceChai Quiz</div>
-          <div id="start-icon" class="img-1">
-          <img src="assets/img/monitor.png"
-          width="50%" height="50%">
+          <div id="start-icon">
+          <img src="assets/img/Computer.png"
+          width="50%">
           </div>
       <div id="question-container" class="hide">
-        <div id="question-img" class="img-1">
-          <img src="assets/img/desktop-tower.png"
-          width="50%" height="50%">
-        </div>
         <div id="question">Question</div>
+        <img id="question-image" src="" width="50%">
         <div id="answer-buttons" class="btn-grid">
           <button class="btn">Answer 1</button>
           <button class="btn">Answer 2</button>
@@ -74,8 +69,22 @@
           <button class="btn">Answer 4</button>
         </div>
       </div>
+      <div id="question-paragraph" class="hide">
+        <p>The brain of the desktop is the <select name="issue"  class="form-control select">
+            <option value="choose">Please Choose</option>
+            <option value="option1">Prescription</option>
+            <option value="option2">Consultation</option>
+            <option value="option3">Insurance</option>
+        </select> . While the <select name="issue"  class="form-control select">
+          <option value="choose">Please Choose</option>
+          <option value="option1">Prescription</option>
+          <option value="option2">Consultation</option>
+          <option value="option3">Insurance</option>
+      </select> allows everything communicate with each component of a desktop. </p>
+      </div>
       <div class="controls">
         <button id="start-btn" class="start-btn btn">Start</button>
+        <button id="restart-btn" class="restart-btn hide">Restart</button>
         <button id="next-btn" class="next-btn btn hide">Next</button>
       
     </div>

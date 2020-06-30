@@ -1,9 +1,11 @@
 const startButton= document.getElementById('start-btn')
 const nextButton= document.getElementById('next-btn')
-const startImage=document.getElementById('start-icon')
+const startIcon=document.getElementById('start-icon')
+const restartButton = document.getElementById('restart-btn')
 const questionContainerElement= document.getElementById
 ('question-container')
-const questionImage = document.getElementById('question-img')
+const questionImage = document.getElementById('question-image')
+const questionParagraph = document.getElementById('question-paragraph')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
@@ -14,11 +16,27 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
-
+restartButton.addEventListener('click', MainPage)
+function startPage()
+{
+    console.log('Started')
+    startButton.classList.remove('hide')
+    startIcon.classList.remove('hide')
+    restartButton.classList.add('hide')
+    questionContainerElement.classList.add('hide')
+}
+function MainPage()
+{
+    console.log('Started')
+    restartButton.classList.add('hide')
+    questionContainerElement.classList.add('hide')
+    questionParagraph.classList.remove('hide')
+}
 function startGame()
 {
     console.log('Started')
     startButton.classList.add('hide')
+    startIcon.classList.add('hide')
     shuffledQuestions = questions.sort(()=>Math.random() - .5)
     currentQuestionIndex= 0
     questionContainerElement.classList.remove('hide')
@@ -31,9 +49,11 @@ function setNextQuestion()
 }
 function showQuestion(question)
 {
+    questionImage.src=question.questionImage
     questionElement.innerText=question.question
     question.answers.forEach(answer => {
         const button=document.createElement('button')
+        document.getElementById("question-image").src == "assets/img/Computer.png"
         button.innerText=answer.text
         button.classList.add('btn')
         if(answer.correct)
@@ -69,8 +89,8 @@ function selectAnswer(e)
     }
     else
     {
-        startButton.innerText='Restart'
-        startButton.classList.remove('hide')
+        restartButton.innerText='Next'
+        restartButton.classList.remove('hide')
     }
 }
 function setStatusClass(element,correct)
@@ -92,6 +112,7 @@ function clearStatusClass(element)
 }
 const questions=[
     {
+        questionImage:"assets/img/cpu.png",
         question:'Which Computer Part is this?',
         answers:[
             {text:'Graphics Card',correct:false},
@@ -102,6 +123,7 @@ const questions=[
         
     },
     {
+        questionImage:"assets/img/gpu.jpg",
         question:'Which Computer Part is this?',
         answers:[
             {text:'Graphics Card',correct:true},
@@ -112,6 +134,7 @@ const questions=[
         
     },
     {
+        questionImage:"assets/img/ssd.png",
         question:'Which Computer Part is this?',
         answers:[
             {text:'SSD',correct:false},
@@ -122,6 +145,7 @@ const questions=[
         
     },
     {
+        questionImage:"assets/img/motherboard.png",
         question:'Which Computer Part is this?',
         answers:[
             {text:'Motherboard',correct:true},
