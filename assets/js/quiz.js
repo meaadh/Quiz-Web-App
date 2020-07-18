@@ -128,6 +128,10 @@ function myFunction()
       }
     }
 }
+function correctAnser()
+{
+	
+}
 const questions=[
     {
         questionImage:"assets/img/cpu.png",
